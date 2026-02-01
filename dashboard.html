@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard — Neuronexus</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header small">
+    <div class="container header-inner">
+      <h1 class="logo"><a href="index.html">Neuronexus</a></h1>
+      <nav>
+        <button id="signOutBtn" class="btn btn-outline">Sign out</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 id="welcome">Welcome</h2>
+      <p id="userInfo"></p>
+      <div class="panel">
+        <h3>Your quick links</h3>
+        <ul>
+          <li><a href="#">Explore courses</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year-dashboard"></span> Neuronexus</small>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    document.getElementById('year-dashboard').textContent = new Date().getFullYear();
+    // Ensure only authenticated users can view dashboard
+    if (!auth.isAuthenticated()) {
+      // Not authenticated — redirect to login
+      window.location.href = 'login.html';
+    } else {
+      const user = auth.getCurrentUser();
+      document.getElementById('welcome').textContent = `Welcome, ${escapeHtml(user.name)}!`;
+      document.getElementById('userInfo').textContent = `Email: ${user.email}`;
+      document.getElementById('signOutBtn').addEventListener('click', () => {
+        auth.logout();
+        window.location.href = 'index.html';
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — Neuronexus</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header small">
+    <div class="container header-inner">
+      <h1 class="logo"><a href="index.html">Neuronexus</a></h1>
+      <nav>
+        <a class="btn btn-outline" href="signup.html">Sign Up</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container form-page">
+    <form id="loginForm" class="card" aria-labelledby="loginTitle" novalidate>
+      <h2 id="loginTitle">Sign in to Neuronexus</h2>
+
+      <div class="form-row">
+        <label for="loginEmail">Email</label>
+        <input id="loginEmail" name="email" type="email" required autocomplete="email" />
+        <p class="error" id="loginEmailError" aria-live="polite"></p>
+      </div>
+
+      <div class="form-row">
+        <label for="loginPassword">Password</label>
+        <div class="password-field">
+          <input id="loginPassword" name="password" type="password" required autocomplete="current-password" />
+          <button type="button" class="toggle-password" aria-label="Toggle password visibility">Show</button>
+        </div>
+        <p class="error" id="loginPasswordError" aria-live="polite"></p>
+      </div>
+
+      <div class="form-row form-inline">
+        <label><input id="rememberMe" name="remember" type="checkbox" /> Remember me</label>
+        <a class="link" href="#">Forgot password?</a>
+      </div>
+
+      <div class="form-row">
+        <button class="btn btn-cta" type="submit">Login</button>
+      </div>
+
+      <p class="muted">Don't have an account? <a href="signup.html">Create one</a></p>
+      <p class="error" id="loginFormError" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year-login"></span> Neuronexus</small>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>document.getElementById('year-login').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Neuronexus — Connect & Learn</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Neuronexus</h1>
+      <nav>
+        <a class="btn btn-outline" href="login.html">Login</a>
+        <a class="btn" href="signup.html">Sign Up</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="container hero-inner">
+      <h2 class="hero-title">Neuronexus</h2>
+      <p class="hero-sub">A place to connect, learn, and grow your neural networks — real or metaphorical.</p>
+      <div class="hero-actions">
+        <a href="signup.html" class="btn btn-cta">Get Started</a>
+        <a href="login.html" class="btn btn-outline">I already have an account</a>
+      </div>
+    </div>
+  </main>
+
+  <section class="features container">
+    <article>
+      <h3>Fast Prototype</h3>
+      <p>Responsive, accessible UI to get started quickly.</p>
+    </article>
+    <article>
+      <h3>Secure-ish</h3>
+      <p>Client-side validation and mock auth for flows — replace with backend later.</p>
+    </article>
+    <article>
+      <h3>Extensible</h3>
+      <p>Simple structure. Add frameworks or APIs as required.</p>
+    </article>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Neuronexus</small>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
