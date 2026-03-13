@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dashboard — Neuronexus</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header small">
@@ -20,13 +20,67 @@
     <section class="card">
       <h2 id="welcome">Welcome</h2>
       <p id="userInfo"></p>
-      <div class="panel">
-        <h3>Your quick links</h3>
-        <ul>
-          <li><a href="#">Explore courses</a></li>
-          <li><a href="#">Community</a></li>
-          <li><a href="#">Settings</a></li>
-        </ul>
+    </section>
+
+    <section class="card">
+      <h2>AI Tools</h2>
+      <div class="features">
+        <a href="https://chat.openai.com/" target="_blank">
+          <article>
+            <img src="image copy 6.png" alt="ChatGPT" style="width:100px; height:100px; border-radius:8px;">
+            <h4>ChatGPT</h4>
+            <p>Conversational AI for assistance and creativity.</p>
+          </article>
+        </a>
+        <a href="https://openai.com/dall-e-2/" target="_blank">
+          <article>
+            <img src="image copy 5.png" alt="DALL-E" style="width:100px; height:100px; border-radius:8px;">
+            <h4>DALL-E</h4>
+            <p>Generate images from text descriptions.</p>
+          </article>
+        </a>
+        <a href="https://claude.ai/" target="_blank">
+          <article>
+            <img src="image copy 4.png" alt="Claude" style="width:100px; height:100px; border-radius:8px;">
+            <h4>Claude</h4>
+            <p>AI assistant for helpful and honest conversations.</p>
+          </article>
+        </a>
+        <a href="https://www.midjourney.com/" target="_blank">
+          <article>
+            <img src="image copy 3.png" alt="Midjourney" style="width:100px; height:100px; border-radius:8px;">
+            <h4>Midjourney</h4>
+            <p>AI-powered image generation from text prompts.</p>
+          </article>
+        </a>
+        <a href="https://stability.ai/" target="_blank">
+          <article>
+            <img src="image.png" alt="Stable Diffusion" style="width:100px; height:100px; border-radius:8px;">
+            <h4>Stable Diffusion</h4>
+            <p>Open-source AI for creating images from text.</p>
+          </article>
+        </a>
+        <a href="https://www.jasper.ai/" target="_blank">
+          <article>
+            <img src="image copy.png" alt="Jasper" style="width:100px; height:100px; border-radius:8px;">
+            <h4>Jasper</h4>
+            <p>AI writing assistant for content creation.</p>
+          </article>
+        </a>
+        <a href="https://www.copy.ai/" target="_blank">
+          <article>
+            <img src="image copy 2.png" alt="Copy.ai" style="width:100px; height:100px; border-radius:8px;">
+            <h4>Copy.ai</h4>
+            <p>AI copywriting tool for marketing and ads.</p>
+          </article>
+        </a>
+        <a href="https://github.com/features/copilot" target="_blank">
+          <article>
+            <img src="image copy 7.png" alt="GitHub Copilot" style="width:100px; height:100px; border-radius:8px;">
+            <h4>GitHub Copilot</h4>
+            <p>AI-powered code completion and suggestions.</p>
+          </article>
+        </a>
       </div>
     </section>
   </main>
@@ -37,7 +91,7 @@
     </div>
   </footer>
 
-  <script src="js/app.js"></script>
+  <script src="app.js"></script>
   <script>
     document.getElementById('year-dashboard').textContent = new Date().getFullYear();
     // Ensure only authenticated users can view dashboard

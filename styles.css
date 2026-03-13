@@ -66,11 +66,14 @@ nav a, nav button{margin-left:.5rem}
 
 .features{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns:repeat(2,1fr);
   gap:1rem;
   margin:2rem 0 4rem;
 }
-.features article{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:1.25rem;border-radius:12px}
+.features article{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:1.25rem;border-radius:12px;text-align:center}
+
+.features a{text-decoration:none;color:inherit;display:block;cursor:pointer}
+.features a:hover{opacity:0.8}
 
 .site-footer{padding:2rem 0;text-align:center;color:var(--muted)}
 
