@@ -28,5 +28,7 @@ What I can do next
 - Connect the frontend to a backend API (I can scaffold minimal Node/Express endpoints).
 - Convert this into a React/Vite or Next.js project.
 - Add UI components, routing, and state management.
+- it shows all the al tools
+- with the use of them
 
 If you want one of those next steps, tell me which and I’ll scaffold it.
